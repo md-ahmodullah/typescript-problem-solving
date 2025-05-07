@@ -47,6 +47,17 @@ function processValue(value: string | number): number {
     return value * 2;
   }
 }
-const result1 = processValue("hello world"); // Output: 5
-const result2 = processValue(30); // Output: 20
-console.log({ result1, result2 });
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length === 0) {
+    return null;
+  } else {
+    const highest = products.sort((a, b) => b.price - a.price)[0];
+    return highest;
+  }
+}
