@@ -39,3 +39,14 @@ class Car extends Vehicle {
     console.log(`Model: ${this.model}`);
   }
 }
+
+function processValue(value: string | number): number {
+  if (typeof value === "string") {
+    return value.length;
+  } else {
+    return value * 2;
+  }
+}
+const result1 = processValue("hello world"); // Output: 5
+const result2 = processValue(30); // Output: 20
+console.log({ result1, result2 });
