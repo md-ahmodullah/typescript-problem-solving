@@ -6,7 +6,9 @@ function formatString(input: string, toUpper?: boolean): string {
   }
 }
 
-const result1 = formatString("Ahmod"); // Output: "HELLO"
-const result2 = formatString("Ahmod", true); // Output: "HELLO"
-const result3 = formatString("Ahmod", false); // Output: "hello"
-console.log({ result1, result2, result3 });
+function filterByRating(
+  items: { title: string; rating: number }[]
+): { title: string; rating: number }[] {
+  const topRatedItems = items.filter((item) => item.rating >= 4);
+  return topRatedItems;
+}
