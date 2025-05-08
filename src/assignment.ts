@@ -13,9 +13,9 @@ function filterByRating(
   return topRatedItems;
 }
 
-// function concatenateArrays<T>(...arrays: T[][]): T[]{
-//     return []
-// }
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.flat();
+}
 
 class Vehicle {
   private make: string;
@@ -61,3 +61,32 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     return highest;
   }
 }
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+// function getDayType(day: Day): string {
+//   if (Day.Sunday) {
+//     return "Weekend";
+//   } else {
+//     return "Weekday";
+//   }
+// }
+// const result1 = getDayType(Day.Monday); // Output: "Weekday"
+// const result2 = getDayType(Day.Sunday); // Output: "Weekend"
+// console.log({ result1, result2 });
+
+// async function squareAsync(n: number): Promise<number>{
+//   if (n >=0) {
+//     return n*n
+//   } else {
+//     return
+//   }
+// }
