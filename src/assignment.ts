@@ -72,16 +72,13 @@ enum Day {
   Sunday,
 }
 
-// function getDayType(day: Day): string {
-//   if (Day.Sunday) {
-//     return "Weekend";
-//   } else {
-//     return "Weekday";
-//   }
-// }
-// const result1 = getDayType(Day.Monday); // Output: "Weekday"
-// const result2 = getDayType(Day.Sunday); // Output: "Weekend"
-// console.log({ result1, result2 });
+function getDayType(day: Day): string {
+  if (day === Day.Saturday || day === Day.Sunday) {
+    return "Weekend";
+  } else {
+    return "Weekday";
+  }
+}
 
 // async function squareAsync(n: number): Promise<number>{
 //   if (n >=0) {
